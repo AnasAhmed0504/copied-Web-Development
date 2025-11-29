@@ -1,0 +1,34 @@
+body{
+    background-image: url(../Images/hi.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.txt{
+    color: goldenrod;
+    text-align: center;
+    font-size: 90px;
+    -webkit-text-stroke: 2px black;
+}
+
+button{
+    width: 200px;
+    height: 70px;
+    border-radius: 10px;;
+    font-size: 30px;
+    margin: 20px;
+    font-weight: bold;
+}
+
+#increment-btn{
+    background-color: darkred;
+}
+
+#save{
+    background-color: green;
+}
+
+
+#welcome-back{
+    font-size: 40px;
+}
