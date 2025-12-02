@@ -1,0 +1,96 @@
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-image: url(../Images/waves.jpg);
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.header {
+  float: right;
+  margin: 15px 25px;
+  color: black;
+  font-weight: 600;
+  font-size: 21px;
+  border-radius: 5px;
+}
+
+.cont {
+  width: 1850px;
+  height: 500px;
+  border: 2px solid black;
+  background-color: rgba(105, 79, 219, 0.712);
+  border-radius: 10px;
+}
+
+#title {
+  float: left;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 10px;
+}
+
+.txt {
+  font-size: 50px;
+  color: rgb(196, 159, 245);
+}
+
+.nav {
+  width: 99vw;
+  height: 6vh;
+  background-color: #dbc3eb;
+  background-image: url(../Images/patternnobg.png);
+  object-fit: fill;
+  box-shadow: 5px 5px 20px 8px rgba(0, 0, 0, 0.315);
+  border-radius: 10px;
+}
+
+.ani {
+  width: 400px;
+  height: 300px;
+  align-self: center;
+  border-radius: 10px;
+  border: 2px solid black;
+  /* background-color: black; */
+  /* animation: float 4s ease-in-out infinite; */
+  transition: 0.5s ease-in-out;
+  float: inline-start;
+  margin: 100px 100px 0px 100px;
+  color: black;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 10px 10px 5px 10px rgba(0, 0, 0, 0.438);
+}
+#box1 {
+  background-color: rgb(124, 62, 206);
+  animation: float 3.5s ease-in-out infinite;
+}
+#box2 {
+  background-color: rgb(240, 38, 156);
+  animation: float 4s ease-in-out infinite;
+}
+#box3 {
+  background-color: rgb(6, 240, 103);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(6px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(6px);
+  }
+}
+
+.header:hover {
+  background-color: #00000018;
+  transform:scale(1.2);
+}
