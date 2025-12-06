@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url(../Images/waves.jpg);
+  background-image: url(Images/waves.jpg);
   object-fit: cover;
   background-repeat: no-repeat;
 }
@@ -27,11 +27,12 @@ body {
   border-radius: 10px;
 }
 
-#title {
+.title {
   float: left;
   font-size: 25px;
   font-weight: bold;
   margin: 10px 10px;
+  transition: none;
 }
 
 .txt {
@@ -43,7 +44,7 @@ body {
   width: 99vw;
   height: 6vh;
   background-color: #dbc3eb;
-  background-image: url(../Images/patternnobg.png);
+  background-image: url(Images/patternnobg.png);
   object-fit: fill;
   box-shadow: 5px 5px 20px 8px rgba(0, 0, 0, 0.315);
   border-radius: 10px;
@@ -91,6 +92,49 @@ body {
 }
 
 .header:hover {
-  background-color: #00000018;
-  transform:scale(1.2);
+  animation: changebgc 0.6s forwards;
+  transition: changebgc 0.5s ease-in-out;
+}
+
+@keyframes changebgc {
+  to {
+    background-color: rgba(255, 255, 255, 0.39);
+    box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.527);
+    color: rgb(150, 129, 76);
+    /* border: 2px solid rgb(150, 129, 76); */
+  }
+}
+
+.btn {
+  font-size: 25px;
+  margin: 20vh 0 0 0;
+  width: fit-content;
+  height: fit-content;
+  background-color: lightseagreen;
+  border: 2px solid black;
+  border-radius: 10px;
+  animation: stretch 3s ease-in-out infinite;
+}
+
+.btn:hover {
+  animation: changecolor 0.6s forwards;
+  transition: changecolor 0.5s ease-in-out;
+}
+
+@keyframes changecolor {
+  to {
+    background-color: rgb(140, 226, 223);
+    box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.39);
+    color: rgb(150, 129, 76);
+    border: 2px solid rgb(150, 129, 76);
+  }
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
