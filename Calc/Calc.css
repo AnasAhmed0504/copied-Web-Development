@@ -1,0 +1,75 @@
+*{
+    font-size: 30px;
+    word-spacing: 15px;
+}
+body{
+    background-color: azure;
+}
+/* This centers the calculator on the screen */
+.page-wrapper {
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;     /* Vertical center */
+  min-height: 100vh;       /* Makes the wrapper the full height of the screen */
+}
+#calc{
+    width: 400px;
+    height: 670px;
+    background-color: beige;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+#display{
+    width:97%;
+    height:30%;
+    background-color: rgb(221, 210, 202);
+    border-radius: 15px;
+    border: 2px solid rgb(122, 122, 107);
+    margin: 10px  4px ;
+    box-shadow: 2px 2px;
+    text-align: end;
+    font-size: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.num{
+    height: 13%;
+    width: 17%;
+    margin: 10px 7px;
+}
+#numpad{
+    width: 92%;
+    height: 80%;
+}
+#add{
+    float: inline-end;
+    height: 70px;
+    margin: -260px 0px;
+}
+#times{
+    float: inline-end;
+    margin: -170px 0px;
+    height: 70px;
+}
+#result{
+    float: inline-end;
+    margin: 100px 0px;
+}
+#divide{
+    float: inline-end;
+    margin: -170px -62px 0px 0px;
+    height: 70px;
+}
+#sub{
+    float: inline-end;
+    height: 70px;
+    margin: -80px -62px 0px 0px;
+}
+.note{
+    font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}

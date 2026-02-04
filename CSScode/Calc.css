@@ -1,0 +1,64 @@
+*{
+    font-size: 30px;
+    word-spacing: 15px;
+}
+body{
+    background-color: azure;
+}
+
+#calc{
+    width: 400px;
+    height: 670px;
+    background-color: beige;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+#display{
+    width:97%;
+    height:30%;
+    background-color: rgb(221, 210, 202);
+    border-radius: 15px;
+    border: 2px solid rgb(122, 122, 107);
+    margin: 10px  4px ;
+    box-shadow: 2px 2px;
+    text-align: end;
+    font-size: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.num{
+    height: 13%;
+    width: 17%;
+    margin: 10px 7px;
+}
+#numpad{
+    width: 92%;
+    height: 80%;
+}
+#add{
+    float: inline-end;
+    height: 20%;
+    margin: -260px 0px;
+}
+#times{
+    float: inline-end;
+    margin: -139px 0px;
+    height: 20%;
+}
+#result{
+    float: inline-end;
+    margin: 100px 0px;
+}
+#divide{
+    float: inline-end;
+    margin: -105px -62px 0px 0px;
+    height: 20%;
+}
+.note{
+    float: inline-end;
+    font-size: 50px;
+    margin-bottom: 100%;
+}
+
+

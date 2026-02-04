@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(5, 48, 5);
+}
+.table{
+    width: 29vw;
+    aspect-ratio: 1/1;
+    background-color:grey;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card-stack{
+    width: 45px;
+    height: 65px;
+    margin-top: 130px;
+    background-image: url(../Images/UnoCardBack.png);
+    border-radius: 5px;
+}
+.pile{
+    
+}
