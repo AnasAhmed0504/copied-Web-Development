@@ -121,3 +121,55 @@ h2{
 
 /* ------------------------------------------------------------------------------------------------------------------------- */
 /* NAVBAR 3 */
+
+.nav3{
+    background-color: #004247;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.nav3 ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav3 a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    border-radius: 7px;
+}
+
+.nav3 .dropdown-content{
+    display: none;
+}
+
+.nav3 .dropdown:hover .dropdown-content{ 
+    display: block;
+    position: absolute;
+    background-color: #004247;
+    border-radius: 7px;
+    border: 2px solid #fff;
+}
+
+.nav3 a:hover{
+    background-color: #002325;
+}
+
+.nav3 .login-btn{
+    padding: 10px 25px;
+    border:2px solid #002325;
+    background-color: #004247;
+    border-radius: 7px;
+    color: #fff;
+}
+
+.nav3 .login-btn:hover{
+    background-color: #002325;
+    cursor: pointer;
+}
