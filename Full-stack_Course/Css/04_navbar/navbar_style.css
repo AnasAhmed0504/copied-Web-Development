@@ -1,0 +1,123 @@
+body{
+    background-color: #202020;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #fff
+}
+
+.nav-container{
+    margin-bottom: 30px;
+}
+h2{
+    margin-bottom: 10px;
+}
+
+.nav1{
+    background-color: #084172;
+    border-radius: 8px;
+    padding: 5px;
+    color:
+}
+
+.nav1 ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0; 
+    padding: 0;
+    justify-content: space-around;
+}
+
+.nav1 li{
+    display: inline;
+
+}
+
+.nav1 a{
+    text-decoration: none;
+    color: #1a1a1a;
+    border: 2px solid #202020;
+    padding: 15px;
+    position: relative;
+}
+
+.nav1 .login-btn{
+    background-color: #202020;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav1 a::after{
+    content: "abc";
+    position: absolute;
+    height: 12px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #084172;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav1 a:hover::after{
+    transform: scaleX(1);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* NAVBAR 2 */
+
+.nav2{
+    box-sizing: border-box;
+    background-color: #343a40;
+    width: 150px;
+    padding: 20px 20px 20px 0px;
+    border-radius: 7px;
+}
+
+.nav2 ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav2 li{
+    margin-bottom: 10px;
+}
+
+.nav2 a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+
+.nav2 a:hover{
+    background-color: #1a1d20;
+}
+
+.nav2 .login-btn{
+    background-color: #343a40;
+    border: 2px solid #1a1d20;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 15px;
+    margin: 0px 10px;
+}
+
+.nav2 .login-btn:hover{
+    background-color: #1a1d20;
+    cursor: pointer;
+}
+
+.nav2 .no-hover{
+    width: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* NAVBAR 3 */
