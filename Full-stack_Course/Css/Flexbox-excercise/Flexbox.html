@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Excercise</title>
+    <link rel="stylesheet" href="Flexbox.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex-container">
+        <div class="sq1">1</div>
+        <div class="sq2">2</div>
+        <div class="sq3">3</div>
+        <div class="sq4">4</div>
+        <div class="sq5">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="flex-container" style="flex-direction: column-reverse">
+        <div class="sq1">1</div>
+        <div class="sq2">2</div>
+        <div class="sq3">3</div>
+        <div class="sq4">4</div>
+        <div class="sq5">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="flex-container" style="justify-content: center">
+        <div class="sq1">1</div>
+        <div class="sq2">2</div>
+        <div class="sq3">3</div>
+        <div class="sq4">4</div>
+        <div class="sq5">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="flex-container" style="align-items: center">
+        <div class="sq1">1</div>
+        <div class="sq2">2</div>
+        <div class="sq3">3</div>
+        <div class="sq4">4</div>
+        <div class="sq5">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="flex-container" style="flex-wrap: wrap; height: auto">
+        <div class="sq1">1</div>
+        <div class="sq2">2</div>
+        <div class="sq3">3</div>
+        <div class="sq4">4</div>
+        <div class="sq5">5</div>
+        <div class="sq5">5</div>
+        <div class="sq5">5</div>
+        <div class="sq5">5</div>
+        <div class="sq5">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <div
+        class="flex-container"
+        style="flex-wrap: wrap; align-content: space-around"
+      >
+        <div class="sq1">1</div>
+        <div class="sq2">2</div>
+        <div class="sq3">3</div>
+        <div class="sq4">4</div>
+        <div class="sq5">5</div>
+        <div class="sq5">5</div>
+        <div class="sq5">5</div>
+        <div class="sq5">5</div>
+        <div class="sq5">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="flex-container">
+        <div class="sq1" style="order: 5">1</div>
+        <div class="sq2" style="order: 1">2</div>
+        <div class="sq3" style="order: 3">3</div>
+        <div class="sq4" style="order: 2">4</div>
+        <div class="sq5" style="order: 4">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="flex-container">
+        <div class="sq2" style="align-self: stretch; height: 100px">2</div>
+        <div class="sq1" style="align-self: center">1</div>
+        <div class="sq3" style="align-self: flex-end">3</div>
+        <div class="sq4" style="align-self: flex-start">4</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="flex-container">
+        <div class="sq2" style="flex-grow: 1">2</div>
+        <div class="sq1" style="flex-grow: 2">1</div>
+        <div class="sq3" style="flex-grow: 2">3</div>
+        <div class="sq4" style="flex-grow: 1">4</div>
+      </div>
+    </div>
+  </body>
+</html>
