@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.navbar {
+  grid-area: nav;
+  background-color: #000000e1;
+}
+
+/* .main{
+    grid-area: main;
+    background-color: #3a3a3a
+} */
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #d8d8d8;
+  overflow: scroll;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #47688d;
+}
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-areas:
+    "nav nav nav nav nav nav"
+    "sidebar main main main main main"
+    "footer footer footer footer footer footer";
+  grid-template-rows: 100px 1000px 300px;
+  grid-template-columns: 250px 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* .vid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* video{
+    margin: 50px;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+} */
+
+.main {
+  grid-area: main;
+  background-color: #3a3a3a;
+  display: flex;
+  justify-content: center; /* Centers video horizontally */
+  align-items: flex-start; /* Aligns to top; use 'center' if you want it dead middle */
+  padding: 20px; /*Use padding instead of video margins for spacing */
+  box-sizing: border-box;
+}
+
+.vid {
+  width: 100%;
+  max-width: 1200px; /* Optional: Prevents video from becoming comically huge on ultrawide monitors */
+}
+
+video {
+  width: 100%; /* Takes up 100% of the .vid container */
+  height: auto; /* Maintains the 16:9 aspect ratio automatically */
+  display: block;
+  border-radius: 8px; /* Optional: Gives it that modern look */
+  box-shadow: 0px 0px 20px 10px #88888888;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0;
+}
+
+li {
+  padding: 20px;
+  text-align: center;
+  border: 0.1rem solid #1a1a1a;
+}
