@@ -1,36 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cards</title>
-    <link rel="stylesheet" href="CardStyle.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="CardStyle.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="cards card1">
-            <h2>Air Force One</h2>
-            <img src="../../Images/AF1.jpg" alt="Nike Air Force 1 Sneakers">
-            <h1>$349<span class="cents">.99</span></h1>
-            <div class="btn-container">
-            <button class="buy" id="buy">Buy</button>
-            <button class="buy" id="add">
-                <img src="../../Images/cart.png" class="cart" alt="">
-                Add to cart
-            </button>
-            </div>
+      <div class="cards card1">
+        <h2>Air Force One</h2>
+        <img
+          src="../../Images/AF1.jpg"
+          class="AF1"
+          alt="Nike Air Force 1 Sneakers"
+        />
+        <h1>$349<span class="cents">.99</span></h1>
+        <div class="btn-container">
+          <button class="buy" id="buy">Buy</button>
+          <button class="buy" id="add">
+            <img src="../../Images/cart.png" class="cart" alt="" />
+            Add to cart
+          </button>
         </div>
-        <div class="cards card2">
-            <h2>Profile</h2>
+      </div>
+      <div class="cards card2">
+        <div class="banner">
+          <a href="https://www.instagram.com/" target="_blank">
+            <img
+              src="https://cdn.brandfetch.io/ido5G85nya/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1724650641044"
+              alt="Insta"
+              class="socials insta"
+            />
+          </a>
+          <a
+            class="yta"
+            href="https://www.youtube.com/"
+            target="_blank"
+          >
+            <img
+              src="../../Images/ytnobg.png"
+              alt="Youtube"
+              class="socials youtube"
+            />
+          </a>
+          <a
+            href="https://open.spotify.com/"
+            target="_blank"
+          >
+            <img
+              src="https://cdn.brandfetch.io/id20mQyGeY/theme/dark/idoxEoRrti.svg?c=1bxid64Mup7aczewSAYMX&t=1737597196704"
+              alt="Spotify"
+              class="socials spotify"
+            />
+          </a>
         </div>
-        <div class="cards card3">
-            <h2>Call Now!</h2>
+        <div class="content">
+          <img src="../../Images/user2.webp" class="pfp" />
+          <p>John Doe</p>
+          <button class="follow">Follow</button>
+          <button class="options">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </button>
         </div>
-        <div class="cards card4">
-            <h2>Details</h2>
-        </div>
+        <ul class="ali-list">
+          <li>18</li>
+          <li>Male</li>
+          <li>I like coding & computers</li>
+          <li>Football Fan</li>
+          <li>Broke</li>
+          <li>Autistic</li>
+        </ul>
+      </div>
+      <div class="cards card3">
+        <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum tenetur provident, voluptates a ea similique nostrum quaerat alias excepturi omnis culpa deserunt dolorum tempore, at exercitationem suscipit, quas quibusdam non iusto sed sunt accusamus. Fuga soluta error explicabo quos modi ex praesentium excepturi adipisci hic voluptas, deleniti quae, tempora quis!</h2>
+        <div class="arrow">↓</div>
+      </div>
+      <div class="cards card4">
+        <h2>Explore Beautiful Nature</h2>
+        <!-- <img
+          class="ryanair"
+          src="https://cdn.brandfetch.io/id4cYT-jDh/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1668076692936"
+          alt=""
+        /> -->
+      </div>
     </div>
-    
-</body>
+    <script src="tilt.js"></script>
+  </body>
 </html>
