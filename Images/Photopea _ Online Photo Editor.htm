@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html translate="no" style="--base: #474747; --bg-panel: #252525; --bg-canvas: #252525; --bg-input: #252525; --bg-bbtn: #5d5d5d; --bg-bbtnOver: #6a6a6a; --brdr: #252525; --text-color: #d5d5d5; --brdrLgt: rgba(255,255,255,0.15); --brdrDrk: rgba(  0,  0,  0,0.6); --alphaDark: 0.25; --gs-invert: 0.78; --accent: #3482f6; --sh-clr: rgba(0,0,0, 0.45); --absc: 0; --abs255: 0; --img20: 20px; --img18: 18px; --img15: 15px; --icon_eye: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4BAMAAADLSivhAAAAElBMVEUAAAAAAAAAAAAAAAAAAAAAAADgKxmiAAAABnRSTlMA/+SYFU6oDnW5AAADSElEQVR4nO1YS5biMAzM6wkHyIc9JMw+aWCfHpo9DHD/q0w+2CrJsmOYVb8XrcBxSSXJsi0nySKLLPITJP1+PO7dO8jzvspGyevj/TWbt22GUh/jCZw4dLQfCU//OtARHkN+1arYXn7PGl+5lK0Ul/exPfUgOvVyfqIPAfAMNojW4xzH/Nc81otOg8GyUnQa+BqFzbL1u6RHUYLWRoNdt/9EY3u334uWTvwVwz1xHvGXDPcVFhHqqvIpxZi1CrX9vd+PPj1gSPbK/TrsO/6NAU1fHbPDphMsbjItZ417BituR48NuAzXtPaHAq0NqHY82Omsp+U3aDyQ+YNE5zrri0nAGlgVzhbVaKwPdvCCWWxk/KaQfSljgyvT+v+w48LIFDLG51lvaf+z5GugkwWwec6TpEcrG6vG+MjdxpCMYkr16oLXzrLphMsNJEDQHnLDiQsuZtGt6A8Ru8gjpeRZNst9REzhvDJW0kfF8NOVYQXC/lQ6qekQbOtsMjeYJsOTala9DYBpV3zqLx54fBVOIZQAbiSYS5FI0+tEfNRKZZLcUZwTeBcHxoATuCOwhu2nOqbtRDz9guAPGDE/GgCHaGPqDZgdIUEwZMuA2ZndamCbjdX/gOmz+cVoXzUwqbeVaSdiwL40cGk/W952IvJWT81GAZuJyFs5+fBsI9p2k9qEc5XT15aGzE+8p1xdMLlleRUwEY57xWly2YazhIkQstQF25DQ8mxgIobM4U2aiVUH/mNFO7yVbaZgkUfTLccWitodz6rfNBkmhy7citdrJU+GDB1BYBqPFrihk85SamNr1KYELsmwcM0gGQHT9hKH3RgZtiGk6LCbeH993Oash4UwbuwgFYLWQpAQRXAQTu3GD8VpuJa3mkopeK1A90CnbCE00tw7bDJ2Hiyet7zDwbuK3m6eYIYIK5pWG0Z2j5ITULGCZlg3ny2iJXP2hKEkhO+3/HHjxr5pEeX3u4IeN868yVFzKe/j9fH+nXyfZX/k6b/DjxVGfO8Gp3kobwWZzL856G1/HDqETVJf9zhJ+JEmjJ7BBpnPPS0NcvNg65C/Vs6tRvkYA03cV8BMrvVX4PkxwltOfv9ZbbOqqvevPV4ussgiP1L+AQ8hBe9YslSuAAAAAElFTkSuQmCC); --icon_eye_invrt: 0.78; --icon_square: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAZQTFRFAAAAAAAApWe5zwAAAAJ0Uk5T/wDltzBKAAAAHElEQVR4nGNgGPHgPwKM8kf5o/xR/iifjvwRDQCtYMRmZCrfVwAAAABJRU5ErkJggg==); --icon_square_invrt: 0.78; --icon_arrow_down: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AgMAAABECt5BAAAACVBMVEUAAAAAAAAAAACDY+nAAAAAAnRSTlMAgJsrThgAAADCSURBVEjH7dChDQMxEAXRDXERqcb1pJoUYZJUeZbJgJE+PHDaoR887VbXdc/t8w/96p3mVSPN33qleW480ZXwteeR6Er4PJcHOuHrzCPQCZ96u2lw08JFg5sWLhpctHHT4KbBTYMnGtw0uGnwQIObBjcNHmlw6IRDg5sGTzQ4tHHT4IkGhzYOnXBo49DGoY0nGhzaOLRx6IBDG4c2Lto4tHHRwqGNizYObfzQCYd249AJhybwTSd8xXlsOuGzuq67sQv6llXHqTZ3eAAAAABJRU5ErkJggg==); --icon_arrow_down_invrt: 0.78; --icon_arrow_right: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AgMAAABECt5BAAAADFBMVEUAAAAAAAAAAAAAAAA16TeWAAAAA3RSTlMAgH8BTzA4AAAA40lEQVRIx33NoZEDMAwAQZXm0lKiS1ARAiLSv0lYZo8uuPj2CZbmNq/572NOc5vX/ObkNLd5yW9uTnObl/zm5jS3eclvbk5zm5f85uY0t3nJb25Oc5uX/ObmNLd5yW9uTnObl/zm5jS3eclvbk5zm5f85uY0t3nJb25Oc5uX/ObmNLd5zWMu8zUf8gS5zNd8yBPkMl/zIU+Qy3zNhzxBLvM1H/IEuczXfMgT5DJf8yFPkMt8zYc8QS7zNR/yBLnM13zIE+QyX/MhT5DLfM2HPEEu8zUf8gS5zNd8yBOszNf8e/0Piwmj/7MOhPAAAAAASUVORK5CYII=); --icon_arrow_right_invrt: 0.78; --icon_chain: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQAgMAAACaKAorAAAAAXNSR0IB2cksfwAAAAxQTFRFAAAAAAAAAAAAAAAANek3lgAAAAR0Uk5TAP/ec9u8mmAAAAHSSURBVHic7di7ccJAEABQgSIFOFMJKoHAGUX4sGdwcAU4oAQ1cVUQ2CWoCZVAQgmOPNoVOu14fx5DYmujneENnOB2b7mimEV5CWOcukKKxzDFm2TKlNFeeqsqzCIKqJmjFwGlOdoLSwok+EWtKNrZ65ZWvqXo1X446fFqip5Y1FP0zKJEEf9F3Q7BSx9D9gCpiA6YnlUUMa1UdMR0o6IW07WKOkxLFXH5gv4h+ny30Rp2noEq2OgGaqBVGKiHLmCgBLVrFAIgvRBaRHpJHfGD9OKMiPQyPyBqVBQQ9SJKFCmd7iaop4hv0TVFfLNvKOKPjS1F/AFUURRZtKJox6KSoo5F8EVNSDio4fEmJB351Rzx68Yx5IrEMWQYaK5IHGiG0WhEymg0hLjdFrSgHyLXpvNsX1chuErKVZyeMnc1DFfrcTUxVzt0NdaaImUet5p9oujeB1Cg6JfHq+ugdh35LSJrHk/2GOIaaJyjUQ0/rYG2sJMMtIH/JQYqLqfCRt/yBf09pO/xDlO9WlpM9eKMmOplPvbApCLsN8a/fDydzjKCz8hx7+uJniJlHs+hzOM5lHk8hzKP54gscl1Sua67XBdnvis412We61rQdcEoXlV+AZ82MdaHEc2lAAAAAElFTkSuQmCC); --icon_chain_invrt: 0.78; --icon_link: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQAgMAAACaKAorAAAAAXNSR0IB2cksfwAAAARnQU1BAACxjwv8YQUAAAAMUExURQAAAAAAAAAAAAAAADXpN5YAAAAEdFJOUwD/3nPbvJpgAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABS0lEQVRYw+2Wy23CQBCGV3Di4NxSAiVw4EYTfkjh4AI4uAQ34Sq4UEKaoIQckiaSjL1ez+x4zS+EoiDNf8Crj89i2dess1gsFsvT5yv3OafZPg85jY5i3QSKUYpZlrM0g6PYloNqkBTrOCjUr/VslYu05CiWSdCoLhHbSFCTpNhOgiNJim0lqNSfI3aVoCRJMUjqJCjUMBF7nNQ/LvTVS9+klmLhdec+uPTGGX34ud9wqeaMgYxLfGX14OCSWQWpTUvrIL2nJRckh0ufcgjPc1K0HMeeSmkXS/WM9BpL1Yx0jaVyRurukop/KJX3DgE0mNC0QBN8a6lAK7NFpCbtTBuhTkvTlvI7eP39G2rQ0/dz2pz+LFje5r7nywfGUIkWjp4/Pg4fd45DZQMqQFApg4oiVF6hQo2VfOjyAF1DsAsNdDWyWCwWy9PGuR/zmiTgwYiKmwAAAABJRU5ErkJggg==); --icon_link_invrt: 0.78; --icon_linkX: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQBAMAAAAVaP+LAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAB5QTFRFAAAAAAAAAPz/APv+AAAAAIWHAPz/AAAAAFhZAPz/sYxkbAAAAAp0Uk5TAP//it7+cnP/TnozG+EAAAN8SURBVHic7ZrNauMwEMe9NDTktoaY7NlhS4+Lb7050KXnloW9Bj9BDVl6bp8gsC+8TqKPkWYkjeRZesmcijrz108jeSLJrqqrXU3Obn4IxQ3bY4nOqrvzhNu2CAnFdW17F/CN2tC2W0+4bff5OrenOIg0nBoKkPy4M1ABkoqzSMOlYRuJIa27xFkkJZQ7cQoICN22RUgKqD3ipiwkDGTbspDI3guQ6M4LkAJ96+Y9V0dPkL+MsyduCPWcuZaoKStCiqQiCykMFM5eLlAkfbmdxnADfQbSwF5LqYlhIyXnhYmUXilMJMZCYRUBzgPO8VmxemM48SoOw4tZA5Nu3BL4N+Wne3qg/314rJW9KMdfT6TfT/Xv79r/Efotd7WxxniuX32ZyU/382wjgB/QqYHr2hfagW6AGb8RttbfrO/G1RltL+9OiPJb1K59WPoe6izsuO+9kB4PzEVyBrcLASk/HyiEFAG6+I2olc5SMEM6S/7IHKQ1HFkY6OS3xK1wks0aWdbUGjL2SqSohiG9TRG5hrT1RIocpI1NUQxo8iOFbJAVigJNQkSuIZLJ9i4KNGWbFrJFQAuhx54pZJC0UBxoErJ/g8JysEiqVN5YINdPWwU0K+ihkVSp7AzQk+uHhXroMI34AyJpoHu/SO2QkOcwmifu/LM7mKcM1yhP6Gvlmw7ex/ZDCyTUIx8QDTQ9WyIhVOlBeGyDhoQIHxMfBkoIHdRc6IkzU3Y255csKmRmonGFnql8RoRAqXuBOvYpW/OEvlihhgRykCJCow2ASPCx37CEYD1oSKACIYtE/9rzhRoK6FOFpIY2K9kjBVQy/WILUuwREXtoZ5YRokKWFbYe++j440orcoQ2yKWw+KPdOYzO+TnyxrZ8+wODtejvNy+XIxZykcp/sl2k4CbiPb2JgKeckm2N2EbrP2/9CjajYxQoY3tMCpVs2MWOEGKHGirb5Pk4dcySO/iJHUXFDsdyx3WxCwS5Kw25Sxaxax9gcy+ikN/cqzGxyzqp60OWEwcp64o1cqMrdukrdQ0tdjEudVUv9vJg4AIlXmeIvWBJTyqwSBrEXkJlZCiKlJWhGFImUBApWRjDSA9k69zXq2IvfGe9gga9z3wpvjctWYsaI6H3/fM/HECfJOQhgbgua1FbG/yBiH3uIfYBitwnMVWXPWWBOLHPhq52tTn2Dwwd7abvOMikAAAAAElFTkSuQmCC); --icon_linkX_invrt: 0.78; --icon_clipping: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4BAMAAADLSivhAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAB5QTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtyhvagAAAAp0Uk5TAP+BjG9nd36YkjdmKDYAAAE9SURBVHic7dVNUgIxEAXgLmFqYIki6C7cQG8w3kBvgDeYuQHcAG9shRSjSfo3Kxb91nz1qntIAkBkI4Ryjh07vl/M/sixY8eOHTt27NixY8eOHV/zvjHlMcMPNjzm1Yf2YoCVBZ/KqX/09rVamaG6KgY4a+0T8rXUCw/Yt1YuvFy1qRotVk6NTRyz1uALgeFDtlvKwlLGnySWF46vOmUh4TcGwzdvd5yVph5YzFfTq05h/2ZHAXML51ad0tN4FDFdLRczUwcFpqo1xWS1qhhgwuxeZ/FqZTH6cukmjkEOF3mBKKrrR8JQzZ7jMsXh4s9xmWLhwYTzR/PFZvM73LDqlH93uHSB1On+MHNXU5kXblt1yrzw0IBvh0t7nPJ0zRPHfEX73GbT8zE04vitW4uvCw/NGCb9BVKnPwo/+AWCcpnkoG73owAAAABJRU5ErkJggg==); --icon_clipping_invrt: 0.78; --icon_lock: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4BAMAAADLSivhAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAB5QTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtyhvagAAAAp0Uk5T/wDA8RHbOKlfhV8gpsUAAAIRSURBVHic7dnPT8IwFAfwyoTBTXAg3nCReMWERD1OY+JR0INHiBE9akyM3iDxxxUu4p8ruPVtr3uvWzXxQr/HtR/XPttSUVTZ3M3bHaf/8s73EFzD2aOIcvBqim87AuI8meE3gXIVGGDFCnGUH9+odvHuvHg7bYXYzYe9FoWLw1yYGPQy5Ty40aGxmOXAY8YKNxs3OEu8OoWveZyatYq9cx4LteAq3tJY0c3AbLmWKegxKtfzKPBGH5qSKbgWd3Qn4aPmffxsXYvjUbuwC71Yu1oMtU4u5cSaG2pwE3pdJh+fwuMdDa4z44OBlzQYptzDmPmhGLeiPo5yZnkwa9SAsEePbpGBbJmwGM6fBxXDqkUVQ7hGDg6NaZ/Fm3Stl5H1RhNCWM6MOK7GVJOgeqyl8UbUVGHxlKtXXA40I4Tlr3lSTUUuXLSlEZbbgjjf5UYvsriTjZ1MTHygeplYroS0pdv+Ff9p2BavBuZ31Yrhxtz3fYl9IrLavr/3FWDc5O6MZCpBEtMXXT6HSXxsZuXJHmLDF8sPjh9MXu31GQI+Mcc7gMfmuAS4ZY4rgHXXZCYFwEYrJEwRsLkN17/FFltsscUWW2yxxRavCP7FfdsB3DLH8WV9mt1ZjQt4YI7LgOvZndX0AGv+/cBlAth80uFXgSGuZXfH6Saw6asLQRI3zP6om1WTOPzOQJP2RUz7nxH6Bppt4quWuqp1AAAAAElFTkSuQmCC); --icon_lock_invrt: 0.78; --icon_fx: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4BAMAAADLSivhAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAB5QTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtyhvagAAAAp0Uk5TAP856RiaeLrPWuP4gCgAAAKoSURBVHic7djNb9MwFABwk6YbHE26drulQuJMJpjELWPaxrGFCa7tgAM3chlXKoF2pQLBv0tsJ/V7jj+e216Q8k62m18cO64/wlgffWzicsWbYOxvodOUGPJNsCcgTYqVBkkRiUHFfMAj8RSAdSyeA1DFYtBkXsRi7ggyzm7Bjd6UJLcBpyD9mE4VmFnSZJxb0mQM0+UuOMb2uMd7wemfr5zffy4x8oW+8qqZbI4/xuPLoi3KbmLxVaHLskUcTuAEybM8Cq9x6TgGD83iWQSem8VHdNxU/KKemp++hVVTBslaXv9SDY9foGoCTuTlZ232g8z+JOILUXBcttlUvrZTIq5EwY3Oyy7ISl3gwUmnjbLzFyQsNwpfIJZVg9XMg9eoxTJEqyckXBjdw5ouzAn4kdHATZluiRs/FE/NjBAvYETA59yy1E/RC3DjudnXIg7FmybgwhiLMhI0Qp04RXWgW85sAOEDc3ipWNbFz4L40NZfqsdGNoDwAFbBUPFJEJ/bOlsN73EQT7vjS8QBHN1OvOTWTVmyK85sAOHKmFZCYH9YDCVXBLHH9njveLULrrh9kMDw4nJb7Phj0HFn8qRiMRmETmhO/KDOfNsWi6VqZCUEjGa6WCxW084iScWUk6UbV+HuduN1nXu+LR6Ee8yNh+FGu7FYoLur1buchOW+4oThqJeqH78pWKyT7amiDeqGRi6I/Duy8rsVZSvFUnEl3j/KD2b65Xuw+mIFq5bPAvbMPqz217l+FDHoiLveZgYdtzWlYnJBQ9aLX8urz5RO5jIHt1de3HwUnNzm7NUnlUb/FS+GnyObIB+N2gMNjAUds2vD4p1/ALMlfugyCqt328Qkxz+GMEu0PjJsGLO0Ob/yu9L8KYzr4+/7gt/fmdUScR999PF/xz/MiK8QkI5LqQAAAABJRU5ErkJggg==); --icon_fx_invrt: 0.78; --icon_folder: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AgMAAABECt5BAAAAAXNSR0IB2cksfwAAAAxQTFRFAAAAAAAAAAAAAAAANek3lgAAAAR0Uk5T/wAZezFBYccAAACiSURBVHic7dahEcJAFIThnbuJOJEyUkIEjiZuECDwCCghTaSfa4ISTkAHOHDc20xWIZjM++1nVi6yDM5b4wu+PZY8NRxn5gPaBuaT4cR8NhyY94Yj82QYtA3F8p2YGjR3mpPmoJmmL7hqTprx1Nz00hw1o2oeNfeag+ao2fM8z/M2XVEY+TPZAm6Ke7pz1Iij4opc1vVzLfJ1nXf/faGdf85vsX+c5iQpMJEAAAAASUVORK5CYII=); --icon_folder_invrt: 0.78; --icon_cross: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI1NiAyNTYiIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48cGF0aCAgZD0ibTMyIDBsMjI0IDIyNC0zMiAzMi0yMjQtMjI0em0yMjQgMzJsLTIyNCAyMjQtMzItMzIgMjI0LTIyNHoiLz48L3N2Zz4=); --icon_cross_invrt: 0.78; --icon_cshape: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgBAMAAAB54XoeAAAAHlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3KG9qAAAACnRSTlMA/gzwl2pFvdUpEhUKmwAABA5JREFUeJytmj1y2zAQhTk0qZ8SkR0rnTIq3EaZcWowJwhvQE0uEHnSuKOazKgLOx83phASPwtyd4V9pUl9FPDeLgHIWUbT+i/xRqoKLQxctcLA40dhYHUvy8sPm50ocKFUIwoslNKiwL1SX0WBtVIPosCTUo+SvLV6l2TxlT3whyBw1QNbQWDXAz8JAqseKFl85x64leMt1FWNGLAwQC0G3BugXPEdDVCux1YGKGZzfjBAsR5bqv+SKr7lAPwlBOwGoFTx1QNQqseeB6BQ8a3VKJkeW1igFgGuLLAVAR4tUKb4KgsUKb6h8MSKb6EcNQLAwgVqAeDeBUr02NoFShTfyQUKLHDWylN68ZU+ML3HrnxgmwzsfGB6j618YHrxnX1gco9dqEBNIrAIgToRuA+BqcV3DIGpPbYKgYk2u93VKLHHliEvtfiWEJi2wOkgMK34aghM67FnCMSKL/IdUvSQLQ6SvE2TZW+SwMv7mPOTHO9x188iaCi3Swv7MiRKypfeESMhXy5jFmV8MY4YifiihevFr/F0X6wjQr5cfF6yL64jIr7okJfoS6zrpvgSOpLsS+hIqi/QkURfIo4k+TL9HrzNl7gjCb7EHbndlylHbvZl0hGjmsvDViZcX+YcMWL6MueIEc+XeUeMWL5onMfyhbZWpPuCO2JE9gV3xIjqC8URI6Ivmsoj+sJZvVN8oTpiRPCF6ogR7gvdESPUF83jhec/UNwTocg21Bd3Uyo+5DsM2DKB4KwhFHeXW2NA7i73hAGZhxnw8CLUhgcEJ1RQvCASGhgviCscqFnADgd+YQFrHMgLIjjyguIF8YADWUFEm5diBhFtXr04QYycoUFxgggOSmPiHNOhzasXJ4iE1PBOYyOHclCMIOYUHue3FULzUqwgRprXcw3/1pCBsHltm8j6iR7EDnz2NbZ+ogcRDK9vBDnIEv1ngfCjm+vgQIHTgxhO1x/z55+R701SmJphKbgO8k4OYpgaPVx4CmZiRwQGzevZXgkmtyECP3uf2jqNtPRnV08ifPnN68W95IeRGkRvYL6V/mKeGkTXzE1QX55hxCB6rzywG6knv/2k3IqAuxG3SRCD6I5Kw8uuL+BxUTnr9W+Ry26TaEjAbrx/G32XO1MSGUBEdtpf4jfYJtGSgCfMRNskPlB443p9ekM8NglSEMfmNbMhrpAxeBpSc7+bvmdoEqTfw4dX3uw7bQjjzENHddMRtBqaREMA1jMRtGL8B6GZ8O+057YE4DVk+MrKNAlCENfzEbR6IwaxRCI46tokCEFcIhH0H00I4h0WQau+SeB7iyMWQau+SeDPrtAIWj1RgnjCI+g+vcVuyVm7zPKAbnIXzGNB9PHFK4eX5b+xO8odC5iVvNtv0D+B3XgP7e3oqQAAAABJRU5ErkJggg==); --icon_cshape_invrt: 0.78; --icon_checkmark: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEAAgMAAAAhHED1AAAADFBMVEUAAAAAAAAAAAAAAAA16TeWAAAABHRSTlMA/95wQrXL2gAAA6VJREFUeJzt27uN3DAQBmBhN3Igd7ElMDDgNnh7gDdgARdcCWpi+3AJakJwBc6dOLek067ImeFoHoltcLLDSf+Jn0WJGtBd16pVq1atWrVq1eo/ql/O8883Z0B/dQaEOPgCpphc559jfHUF9DG+uAJCjD6EaQ5IjvNnAh9CvwS8jPaAhSDG7/aAaQ14M5+/EsT4zRzQfwTE0RoQtoB3a8C0BVin9EYQo3VKPwjMCOEZkGwB0zPAdjc/CaxTeicwTumQBSRLwJQFWBAyAhtCTmCa0qEIMEzpexGgn9KnWJY64JM34OINuDsDIIH6kQAJ1A8lSKB+LEKCUXl+I2gEfyNB0gZAgkF5PiRQvxQggfq11AgaQSPoGkHXCLpG0P0rBFx3TkLAduckBGx3TkLwhVkwiQh+Mks2EcGdWTFJCE7cmk1CsFzlWDlfRLBcZe0zWDQRlqusfQZDAuq49Sprn8GQgLrS9Sor7T1EQB12qUYvt1hZ5IXeq4NbbrFjAq69d5YQ9MzoPksIAhMuIpiY4SkIyHQNAXmXiwj2YQ7M7xiCfZiJ+R1DsA8TTTQRQXazIwQRQT7fBwtBPt8hgoSgmO8AARFQj+5ivgMESEA+N8tHXokACcgnd/nIKxEgAfnuKIdZIOgJAIKIoAfH5AgiggAOyhFEBBM4KEMQEaCADEFEgIaQIYgIEGKGICIoO90FgoyAQZAR4JE+EaBObQmD/tADAV5abRGFhvpawaku4yD2hoD+eSoEVQQpQRVBSkAg3HQEGOGqIyAQRhUBgfCuIujwSvCmI8Br0auOAK+G56M1BHgxOl+vioBA0BEQCIhg4AMQwm/w89HXNkKAdfi1DRFgpaMAiKAkIBB0BIcIgoYDj3BIcIRwSHCAIOm5sAiinguHkCQBHMIgCWAQZG0nBkHYdpp8BMRaR0dAPEZ1BMSDXElQR0jSgBrCIA2oIMibjxUERfORRkjyABphkAeQCJr+K4mg6r9SCEkTQCEMmgC01tG2oNGCT92Chgs+dQsaLfi0LWiEoO3C15b+8oIISRsAEQZtAEDQ71cCCIYdU+UbzrBdqXzDGTZMlS2ZUR9QvOZNWyBzBNMmzBzBtA00b82NloAMwbgL9OIjyBGMO2FPToIdwbwR9uIj2BHMm4FPToIHgn0v8IZg3428IZi3Aj8QRnvAiuDa3B+ifS/yWr2P4GOtM3oC5rWO8/83BB/BguAiWBBGX0D3w3l+99Ub0KpVq1b6+gOHPSRKOIZnzgAAAABJRU5ErkJggg==); --icon_checkmark_invrt: 0.78;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>if (localStorage.length === 0 || typeof JSON.parse(localStorage._ppp)['0_uid'] === 'undefined') {Object.defineProperty(window, 'innerWidth', {get() { return document.documentElement.offsetWidth + 320 },});}</script><script>if (localStorage.length === 0 || typeof JSON.parse(localStorage._ppp)['0_uid'] === 'undefined') {Object.defineProperty(window, 'innerWidth', {get() { return document.documentElement.offsetWidth + 320 },});}</script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=5.0, initial-scale=1.0">
+		<meta name="thumbnail" content="https://www.photopea.com/promo/screens/scr5.png">
+		<meta name="theme-color" content="#474747">
+		
+		<title>Photopea | Online Photo Editor</title>
+		<meta name="description" content="Photopea Online Photo Editor lets you edit photos, apply effects, filters, add text, crop or resize pictures. Do Online Photo Editing in your browser for free!">
+		
+		<link rel="canonical" href="https://www.photopea.com/">
+		<link rel="alternate" href="https://www.photopea.com/" hreflang="en">
+		<link rel="alternate" href="https://www.photopea.com/" hreflang="x-default">
+		<link rel="alternate" href="https://www.photopea.com/l/af_za/" hreflang="af">
+		<link rel="alternate" href="https://www.photopea.com/l/ar_eg/" hreflang="ar">
+		<link rel="alternate" href="https://www.photopea.com/l/az_az/" hreflang="az">
+		<link rel="alternate" href="https://www.photopea.com/l/bg_bg/" hreflang="bg">
+		<link rel="alternate" href="https://www.photopea.com/l/bn_bd/" hreflang="bn">
+		<link rel="alternate" href="https://www.photopea.com/l/ca_es/" hreflang="ca">
+		<link rel="alternate" href="https://www.photopea.com/l/cs_cz/" hreflang="cs">
+		<link rel="alternate" href="https://www.photopea.com/l/da_dk/" hreflang="da">
+		<link rel="alternate" href="https://www.photopea.com/l/de_de/" hreflang="de">
+		<link rel="alternate" href="https://www.photopea.com/l/el_gr/" hreflang="el">
+		<link rel="alternate" href="https://www.photopea.com/l/es_es/" hreflang="es">
+		<link rel="alternate" href="https://www.photopea.com/l/et_ee/" hreflang="et">
+		<link rel="alternate" href="https://www.photopea.com/l/eu_es/" hreflang="eu">
+		<link rel="alternate" href="https://www.photopea.com/l/fa_ir/" hreflang="fa">
+		<link rel="alternate" href="https://www.photopea.com/l/fi_fi/" hreflang="fi">
+		<link rel="alternate" href="https://www.photopea.com/l/fr_fr/" hreflang="fr">
+		<link rel="alternate" href="https://www.photopea.com/l/gl_es/" hreflang="gl">
+		<link rel="alternate" href="https://www.photopea.com/l/gu_in/" hreflang="gu">
+		<link rel="alternate" href="https://www.photopea.com/l/he_il/" hreflang="he">
+		<link rel="alternate" href="https://www.photopea.com/l/hi_in/" hreflang="hi">
+		<link rel="alternate" href="https://www.photopea.com/l/hr_hr/" hreflang="hr">
+		<link rel="alternate" href="https://www.photopea.com/l/hu_hu/" hreflang="hu">
+		<link rel="alternate" href="https://www.photopea.com/l/id_id/" hreflang="id">
+		<link rel="alternate" href="https://www.photopea.com/l/it_it/" hreflang="it">
+		<link rel="alternate" href="https://www.photopea.com/l/ja_jp/" hreflang="ja">
+		<link rel="alternate" href="https://www.photopea.com/l/ka_ge/" hreflang="ka">
+		<link rel="alternate" href="https://www.photopea.com/l/km_kh/" hreflang="km">
+		<link rel="alternate" href="https://www.photopea.com/l/kn_in/" hreflang="kn">
+		<link rel="alternate" href="https://www.photopea.com/l/ko_kr/" hreflang="ko">
+		<link rel="alternate" href="https://www.photopea.com/l/ky_kg/" hreflang="ky">
+		<link rel="alternate" href="https://www.photopea.com/l/lt_lt/" hreflang="lt">
+		<link rel="alternate" href="https://www.photopea.com/l/lv_lv/" hreflang="lv">
+		<link rel="alternate" href="https://www.photopea.com/l/mk_mk/" hreflang="mk">
+		<link rel="alternate" href="https://www.photopea.com/l/ml_in/" hreflang="ml">
+		<link rel="alternate" href="https://www.photopea.com/l/mr_in/" hreflang="mr">
+		<link rel="alternate" href="https://www.photopea.com/l/ms_my/" hreflang="ms">
+		<link rel="alternate" href="https://www.photopea.com/l/my_mn/" hreflang="my">
+		<link rel="alternate" href="https://www.photopea.com/l/nb_no/" hreflang="nb">
+		<link rel="alternate" href="https://www.photopea.com/l/ne_np/" hreflang="ne">
+		<link rel="alternate" href="https://www.photopea.com/l/nl_nl/" hreflang="nl">
+		<link rel="alternate" href="https://www.photopea.com/l/pa_pk/" hreflang="pa-PK">
+		<link rel="alternate" href="https://www.photopea.com/l/pa_in/" hreflang="pa">
+		<link rel="alternate" href="https://www.photopea.com/l/pl_pl/" hreflang="pl">
+		<link rel="alternate" href="https://www.photopea.com/l/pt_br/" hreflang="pt-BR">
+		<link rel="alternate" href="https://www.photopea.com/l/pt_pt/" hreflang="pt">
+		<link rel="alternate" href="https://www.photopea.com/l/ro_ro/" hreflang="ro">
+		<link rel="alternate" href="https://www.photopea.com/l/ru_ru/" hreflang="ru">
+		<link rel="alternate" href="https://www.photopea.com/l/sk_sk/" hreflang="sk">
+		<link rel="alternate" href="https://www.photopea.com/l/sl_si/" hreflang="sl">
+		<link rel="alternate" href="https://www.photopea.com/l/sq_al/" hreflang="sq">
+		<link rel="alternate" href="https://www.photopea.com/l/sv_se/" hreflang="sv">
+		<link rel="alternate" href="https://www.photopea.com/l/sw_ke/" hreflang="sw">
+		<link rel="alternate" href="https://www.photopea.com/l/ta_in/" hreflang="ta">
+		<link rel="alternate" href="https://www.photopea.com/l/te_in/" hreflang="te">
+		<link rel="alternate" href="https://www.photopea.com/l/th_th/" hreflang="th">
+		<link rel="alternate" href="https://www.photopea.com/l/tl_ph/" hreflang="tl">
+		<link rel="alternate" href="https://www.photopea.com/l/tr_tr/" hreflang="tr">
+		<link rel="alternate" href="https://www.photopea.com/l/uk_ua/" hreflang="uk">
+		<link rel="alternate" href="https://www.photopea.com/l/ur_pk/" hreflang="ur">
+		<link rel="alternate" href="https://www.photopea.com/l/uz_uz/" hreflang="uz">
+		<link rel="alternate" href="https://www.photopea.com/l/vi_vn/" hreflang="vi">
+		<link rel="alternate" href="https://www.photopea.com/l/zh_cn/" hreflang="zh-Hans">
+		<link rel="alternate" href="https://www.photopea.com/l/zh_hk/" hreflang="zh-HK">
+		<link rel="alternate" href="https://www.photopea.com/l/zh_tw/" hreflang="zh-TW">
+		<link rel="alternate" href="https://www.photopea.com/l/zu_za/" hreflang="zu">
+		
+		<link rel="apple-touch-icon" href="Photopea%20_%20Online%20Photo%20Editor_files/icon512.png">
+		<link rel="icon" sizes="512x512" href="Photopea%20_%20Online%20Photo%20Editor_files/icon512.png">
+		<link rel="image_src" type="image/png" href="Photopea%20_%20Online%20Photo%20Editor_files/icon512.png">
+		<link rel="manifest" href="https://www.photopea.com/manifest.json">
+		<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/fmophgdjdipcbfjiopifpngdjmemonko">
+		
+		<style>		
+			body, button, input, textarea, select {  font-family: "Open Sans", "Segoe UI",  sans-serif;  }
+			body, input, select, button {  font-size: 13px;  }
+			
+			body {  background-image: radial-gradient(rgb(40,40,50), rgb(10, 0, 10));  }
+			#cap { 
+				font-size:1.2em;
+				padding:0 2% 1em 2%; 
+				color:#e6e6e6;
+				user-select:text;
+			}
+			#cap a { color:inherit;  font-weight:bold;  }
+			#cap p { margin-bottom:1.5em;  line-height:1.5em;  }
+			#cap button {  color:white;  background-color:rgba(0,0,0,0.15);  border:2px solid #3482f6; cursor:pointer; font-size:1.3em; padding:0.4em 1em 0.5em 1em;  border-radius:500px;  display:block;  margin:30px auto;  transition: box-shadow .3s;  }
+			#cap button:hover {  box-shadow: 0 0 30px #3482f6;  }
+			#cap h1 { text-align:center;  font-size: 4em;  margin:0.5em 0 0 0;  }
+			
+			#mid {  max-width:1100px;  margin:0px auto;  }
+			#bar {  padding:0.4em 0;  line-height:2.5em;  }
+			#bar a {  text-decoration:none;  font-weight:normal;  margin:0 10px;  bottom:4px;  position:relative;  }
+			
+			
+			
+			.pair {  display:flex;  margin:3em 0;  }
+			.pair div {  width:50%;  }
+			.pair h2 {  margin:0;  }
+			
+			@media (max-width: 600px) {
+			.pair {  display:block;  margin:3em 1em;  }
+			.pair div {  width:100%;  }
+			}
+			
+			.pair p {  margin: 0.2em 0;  opacity:0.6;  }
+			.pair div {padding: 1em 0;}
+		</style>		
+	<link href="Photopea%20_%20Online%20Photo%20Editor_files/all09.css" rel="stylesheet"><link rel="stylesheet" href="Photopea%20_%20Online%20Photo%20Editor_files/content-style.css"></head>
+	
+	<body class="theme0" style="overscroll-behavior: contain;">		
+		<!---->
+		<div id="cap" style="display:none;">
+			<div id="bar">
+				<img style="width:36px; height:auto; margin:0 6px -6px 0" width="512" height="512" src="Photopea%20_%20Online%20Photo%20Editor_files/icon512.png" alt="Photopea logo"> 
+				<b style="font-size:34px;  margin-right:20px">Photopea</b>
+				<a target="_blank" href="https://www.photopea.com/learn" title="Learn photo editing">Learn</a>
+				<a target="_blank" href="https://www.photopea.com/tuts" title="Graphics tutorials">Tutorials</a>
+				<a target="_blank" href="https://www.photopea.com/templates" title="Free PSD templates">Templates</a>
+				<a target="_blank" href="https://www.photopea.com/api" title="Insert a photo editor into your product">API</a>
+			</div>
+			
+			<h1>Free Online Photo Editor</h1>
+			<h2 style="text-align:center">Unlock your creativity with the best free photo editor.</h2>
+			<p style="text-align:center; font-size:1em; opacity:0.6">Transform 
+your photos with professional-grade tools in a free online photo editor 
+that works right in your browser. No downloads, no hassle.</p>
+			<button onclick="addPP()">Start using Photopea</button>
+			
+			<div id="mid">								
+				<div class="pair">
+					<div style="text-align:center;">
+						<img src="Photopea%20_%20Online%20Photo%20Editor_files/table.webp" style="width:80%; height:auto;" width="800" height="800" alt="Photo editor on a laptop">
+					</div>
+					<div>
+						<h2>Fully Local</h2>
+						<p>There are no uploads. Photopea runs on your device, using your 
+CPU and your GPU. All files open instantly, and never leave your device.</p>
+						
+						<h2>Cost-Effective</h2>
+						<p>Enjoy all the premium features without spending a dime.</p>
+						
+						<h2>Convenient Editor</h2>
+						<p>No need to install heavy software on your device. Just open your browser and start editing.</p>
+						
+						<h2>Runs Everywhere</h2>
+						<p>Our photo editor runs on any device. The better hardware you have, the better it runs.</p>
+						
+						<button onclick="addPP()">Start using Photopea</button>
+						
+					</div>
+				</div>
+				
+				
+				<div class="pair">
+					<div>
+						
+						<h2>Professional Editor</h2>
+						<p>Photopea offers a full suite of editing tools, from basic 
+features like cropping and resizing to advanced features such as 
+layering, masking, and blending.</p>
+						
+						<h2>Full PSD support</h2>
+						<p>Photopea fully supports a popular PSD format, both opening and saving files. It is the main format of Photopea.</p>
+						
+						<h2>Swiss knife for graphics</h2>
+						<p>Open and edit PNG, JPG, GIF, BMP, WEBP, SVG, PDF, AI, AVIF, DDS, HEIC, TIFF, MP4, TGA, CDR, PDN, EPS, INDD, Figma and 
+						<a target="_blank" href="https://github.com/photopea/photopea?tab=readme-ov-file#supported-formats">40 other formats</a>.</p>
+					
+						<h2>Perfect RAW support</h2>
+						<p>Photopea opens DNG, CR2, CR3, NEF, ARW, RW2, RAF, ORF and FFF files. Set the Exposure, Color Balance, 
+						Contrast, Highlights and Shadows, etc.</p>
+						<button onclick="addPP()">Start using Photopea</button>
+					</div>
+					<div style="text-align:center;">
+						<img src="Photopea%20_%20Online%20Photo%20Editor_files/hand_phone.webp" style="width:70%; height:auto;" width="1044" height="1328" alt="Photo editor on a phone">
+					</div>
+				</div>
+				
+				
+				<div class="pair">
+					<div style="text-align:center">
+						<video style="width:80%; height:auto;" muted="muted" loop="" autoplay="autoplay">
+						  <source src="Photopea%20_%20Online%20Photo%20Editor_files/goats.mp4" type="video/mp4">
+						</video>
+						<!---->
+					</div>
+					<div>
+						<h2>State-of-the-art AI</h2>
+						<p><a target="_blank" href="https://x.com/photopeacom/status/1735723561950539852/video/1">Remove background with one click</a>,
+						or <a target="_blank" href="https://x.com/photopeacom/status/1661425407944425494/video/1">replace any part of an image</a>
+						with a new content through a text description.</p>
+						
+						<h2>All Essential Features</h2>
+						<p>We have Layers, Masks, Layer Styles, Smart Objects, Adjustment Layers, Channels, Paths and more!</p>
+						
+						<h2>Adjustments and Filters</h2>
+						<p>Do you need Levels and Curves? A Gaussian Blur? Or advanced stuff such as Liquify or Puppet Warp? We have it all!</p>
+						
+						<h2>Vector Graphics</h2>
+						<p>Create and edit vector graphics directly within the editor. Perfect for designers working on logos, icons, or illustrations.</p>
+						
+						<button onclick="addPP()">Start using Photopea</button>
+					</div>
+				</div>
+				
+				<h2 style="text-align:center">Who Can Benefit from our Free Photo Editor?</h2>
+				<div class="pair">
+					<div>
+						<h2>Social Media Enthusiasts</h2>
+						<p>Enhance your photos before sharing them on platforms like 
+Instagram, Facebook, or Twitter. Make every post stand out with unique 
+edits.</p>
+
+						<h2>Students and Educators</h2>
+						<p>Create stunning visuals for presentations, assignments, and 
+more. Our free online photo editor is a great tool for educational 
+projects.</p>
+
+						<h2>Small Business Owners</h2>
+						<p>Design promotional materials, edit product photos, and create 
+engaging content for your website or online store, all without spending 
+on expensive software.</p>
+
+						<h2>Graphic Designers</h2>
+						<p>Whether you’re a freelancer or part of a design team, 
+Photopea’s free photo editor offers all the features you need to produce
+ professional-quality work.</p>
+							
+						<button onclick="addPP()">Start using Photopea</button>
+					</div>
+					<div style="text-align:center;">
+						<img src="Photopea%20_%20Online%20Photo%20Editor_files/laptop.webp" style="width:80%; height:auto;" width="853" height="853" alt="Freelancer using a photo editor">
+					</div>
+				</div>
+				
+				<p style="text-align:center">
+				  <a href="mailto:support@photopea.com">support@photopea.com</a> 
+				| <a target="_blank" href="https://www.photopea.com/privacy.html">Privacy Policy</a>
+				| <a target="_blank" href="https://x.com/photopeacom">Twitter</a>
+				| <a target="_blank" href="https://facebook.com/photopea/">Facebook</a>
+				| <a target="_blank" href="https://reddit.com/r/photopea/">Reddit</a>
+				</p>
+			</div>
+		</div>
+		<!---->
+		
+		<script>
+			window.___osw = window.innerWidth;  console.log(window.innerWidth);
+			var cap = document.getElementById("cap"), added=false;
+			var href = window.location.href;
+			var ls = window.localStorage, ppp=null;  if(ls) {  ppp=ls.getItem("_ppp");  if(ppp) ppp=JSON.parse(ppp);  }  if(ppp==null) ppp={};
+			
+			function addPP() {
+				cap.style.display="none";  
+				if(ppp) {  ppp["capShown"]="false";  ls.setItem("_ppp", JSON.stringify(ppp));   }
+				if(added) return;  added=true;  console.log("adding");
+				var fls = [
+					"style/all09.css",
+					"code/ext/ext1770557480.js",
+					"code/dbs/DBS1770322202.js",
+					"code/pp/pp1771289963.js"
+				];
+				var fromCDN = window.location.host=="www.photopea.com" && !window.location.href.endsWith("nocdn");
+				var ao = window.location.ancestorOrigins;
+				if(ao) for(var i=0; i<ao.length; i++) if(ao[i].indexOf("figma.com")!=-1) fromCDN=false;
+				
+				for(var i=0; i<fls.length; i++) {
+					var url = (fromCDN?"//vecpea.com/":"")+fls[i], isJS = url.endsWith(".js");
+					var el = document.createElement(isJS ? "script" : "link");
+					el.setAttribute(isJS ? "src" : "href",url);
+					if(!isJS) el.setAttribute("rel","stylesheet");
+					else el.async=false;
+					
+					(isJS ? document.body : document.head).appendChild(el);
+				}
+			}
+			
+			if(href.indexOf("#")!=-1 || href.indexOf("=")!=-1 || ppp["capShown"]=="false") addPP();
+			else cap.style.display="";		
+		</script><script src="Photopea%20_%20Online%20Photo%20Editor_files/ext1770557480.js"></script><script src="Photopea%20_%20Online%20Photo%20Editor_files/DBS1770322202.js"></script><script src="Photopea%20_%20Online%20Photo%20Editor_files/pp1771289963.js"></script>
+	
+
+
+<input class="" type="file" multiple="" style="display:none"><div class="flexrow app"><div><div class=""></div><div class="cmanager"><div class="alertcont" style="pointer-events:none"></div><div class="alertcont"></div></div><div style="position:relative; width: 1869px; height: 0px; overflow:hidden; white-space: nowrap; app-region:drag;"><div style="float: right; padding: 4px; position: relative; z-index: 1; right: 0px; display: none;"><button class="fitem" style="margin-left: 4px; cursor: pointer; display: none;">About</button><button class="fitem" style="margin-left: 4px; cursor: pointer; display: none;">Report a bug</button><button class="fitem" style="margin-left: 4px; cursor: pointer; display: none;">Learn</button><button class="fitem" style="margin-left: 4px; cursor: pointer; display: none;">Blog</button><button class="fitem" style="margin-left: 4px; cursor: pointer; display: none;">API</button><button class="fitem" style="margin-left:4px;cursor:pointer;"><svg class="gsicon" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21.325 9.308c-.758 0-1.425.319-1.916.816-1.805-1.268-4.239-2.084-6.936-2.171l1.401-6.406 4.461 1.016c0 1.108.89 2.013 1.982 2.013 1.113 0 2.008-.929 2.008-2.038s-.889-2.038-2.007-2.038c-.779 0-1.451.477-1.786 1.129l-4.927-1.108c-.248-.067-.491.113-.557.365l-1.538 7.062c-2.676.113-5.084.928-6.895 2.197-.491-.518-1.184-.837-1.942-.837-2.812 0-3.733 3.829-1.158 5.138-.091.405-.132.837-.132 1.268 0 4.301 4.775 7.786 10.638 7.786 5.888 0 10.663-3.485 10.663-7.786 0-.431-.045-.883-.156-1.289 2.523-1.314 1.594-5.115-1.203-5.117zm-15.724 5.41c0-1.129.89-2.038 2.008-2.038 1.092 0 1.983.903 1.983 2.038 0 1.109-.89 2.013-1.983 2.013-1.113.005-2.008-.904-2.008-2.013zm10.839 4.798c-1.841 1.868-7.036 1.868-8.878 0-.203-.18-.203-.498 0-.703.177-.18.491-.18.668 0 1.406 1.463 6.07 1.488 7.537 0 .177-.18.491-.18.668 0 .207.206.207.524.005.703zm-.041-2.781c-1.092 0-1.982-.903-1.982-2.011 0-1.129.89-2.038 1.982-2.038 1.113 0 2.008.903 2.008 2.038-.005 1.103-.895 2.011-2.008 2.011z"></path></svg></button><button class="fitem" style="margin-left:4px;cursor:pointer;"><svg class="gsicon" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"></path></svg></button><button class="fitem" style="margin-left:0px;cursor:pointer;"><svg class="gsicon" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"></path></svg></button></div><div style="position: absolute; left: 0px; top: 0px;"></div></div><div class="flexrow"><div class="panelblock mainblock"><div class="block"><div class="body" style="cursor:move; height:992px; width:1869px; overflow:hidden; position:relative;"><div class="pbody"><canvas width="1869" height="992" style="width: 1869px; height: 992px;"></canvas></div></div></div></div></div></div><div style="padding-top: 10px; overflow: hidden; padding-left: 19px; z-index: 1; height: 981px; width: 600px;"><a href="https://www.photopea.com/tuts/photopea-says-i-am-blocking-ads-but-i-am-not/" target="_blank" style="color:white;">Ad blocking detected</a><img style="cursor:pointer;width:300px;height:250px;" src="Photopea%20_%20Online%20Photo%20Editor_files/pp_wide.png"><img style="cursor:pointer;width:300px;height:250px;" src="Photopea%20_%20Online%20Photo%20Editor_files/pp_wide.png"><img style="cursor:pointer;width:300px;height:250px;" src="Photopea%20_%20Online%20Photo%20Editor_files/pp_wide.png"></div><textarea style="font-family:Arial; font-size:14px; z-index:-1;  position:absolute; top:0px; left:0px;  pointer-events: none; opacity:0; width:2179px; height:150px;"></textarea></div></body></html>
