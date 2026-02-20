@@ -1,44 +1,75 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Demo Website</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
 
-    <div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../../Images/Action_Card.png" class="d-block w-100" alt="...">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../../Images/Action_Card.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../../Images/character_card.png" class="d-block w-100" alt="...">
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="../../Images/character_card.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <div class="vid-container">
+
+    <div class="card">
+      <img src="https://i.ytimg.com/vi/PW_gP67L66U/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCmRXR01MOKn6J_TAWXLK2u-xxfBg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">New Video!</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+          content.</p>
+        <a href="https://www.youtube.com/watch?v=PW_gP67L66U" class="btn btn-primary">Watch video</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://i.ytimg.com/vi/del84QYdHgo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAdaSCTpxI4lRPqhAX62sMl4DEv4Q" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">New Video!</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+          content.</p>
+        <a href="https://www.youtube.com/watch?v=del84QYdHgo" class="btn btn-primary">Watch video</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img
+        src="https://i.ytimg.com/vi/k1-el0W7ZR4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAFPfqEhX1Qw_0ou4K58sHC08kFMA"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">New Video!</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+          content.</p>
+        <a href="https://www.youtube.com/watch?v=k1-el0W7ZR4" class="btn btn-primary">Watch video</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
