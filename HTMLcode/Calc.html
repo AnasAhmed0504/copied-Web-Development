@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../CSScode/Calc.css">
+</head>
+<body>
+    <div id="calc">
+        <div id="display">Enter a calculation</div>
+        <div id="numpad">
+        <button class="num" id="1" onclick="show('1')">1</button>
+        <button class="num" id="2" onclick="show('2')">2</button>
+        <button class="num" id="3" onclick="show('3')">3</button>
+        <button class="num" id="4" onclick="show('4')">4</button>
+        <button class="num" id="5" onclick="show('5')">5</button>
+        <button class="num" id="6" onclick="show('6')">6</button>
+        <button class="num" id="7" onclick="show('7')">7</button>
+        <button class="num" id="8" onclick="show('8')">8</button>
+        <button class="num" id="9" onclick="show('9')">9</button>
+        <button class="num" id="0" onclick="show('0')">0</button>
+        <button class="num" id="add" onclick="show('+')">+</button>
+        <button class="num" id="times" onclick="show('×')">×</button>
+        <button class="num" id="result" onclick="calculate()">=</button>
+        <button class="num" id="sq" onclick="show('²')">x²</button>
+        <button class="num" id="sqrt" onclick="show('√')">√x</button>
+        <button class="num" id="lbra" onclick="show('(')">(</button>
+        <button class="num" id="rbra" onclick="show(')')">)</button>
+        <button class="num" id="point" onclick="show('.')">.</button>
+        <button class="num" id="divide" onclick="show('÷')">÷</button>
+        </div>
+    </div>
+    <span class="note">To clear the screen double click the equals ( = ) button</span>
+    <script src="../JavaScriptCode/Calc.js"></script>
+</body>
+</html>
